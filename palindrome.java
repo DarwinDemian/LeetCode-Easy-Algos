@@ -6,8 +6,9 @@
  - For example, 121 is a palindrome while 123 is not.
 */
 
+// O(n)
 class Solution {
-    public boolean isPalindrome(int num) {
+    public static boolean isPalindrome(int num) {
       if (num < 0) return false;
 
       int numCopy = num;
@@ -19,14 +20,11 @@ class Solution {
         numCopy /= 10;
       }
 
-      if (rev == num) {
-        return true;
-      }
-
-      return false;
+      return rev == num ? true : false;
     }
 
-    public void main(String[] args) {
-      isPalindrome(121);
+    public static void main(String[] args) {
+      System.out.println(isPalindrome(121));
+      System.out.println(isPalindrome(123));
     }
 }
